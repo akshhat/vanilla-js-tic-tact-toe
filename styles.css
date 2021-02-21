@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: 300px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.row {
+    height: 33%;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    width: 33%;
+    height: 97%;
+    border: 2px solid black;
+}
+
+#row1 > .cell {
+    border-top: none;
+}
+
+#row3 > .cell {
+    border-bottom: none;
+}
+
+.left {
+    border-left: none;
+}
+
+.right {
+    border-right: none;
+}
