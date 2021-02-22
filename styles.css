@@ -1,104 +1,142 @@
 *::selection {
-    background-color: #DAC8FE;
-    color: #5e2dc0;
+  background-color: #dac8fe;
+  color: #5e2dc0;
 }
 
 h1 {
-    font-size: 40px;
+  font-size: 40px;
 }
 
 body {
-    font-family: 'Permanent Marker', cursive;
-    padding: 10px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: #FF4C4C;
-    color: #FFCA27;
+  font-family: "Permanent Marker", cursive;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-color: #ff4c4c;
+  color: #ffca27;
 }
 
 main {
-    height: 300px;
-    width: 300px;
-    display: flex;
-    flex-direction: column;
-    box-sizing: border-box;
-    justify-content: center;
-    align-items: center;
-    box-sizing: border-box;
+  height: 300px;
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
 }
 
 .row {
-    height: 33%;
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  height: 33%;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 .cell {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 45px;
-    width: 33%;
-    height: 97%;
-    border: 2px solid #FFCA27;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 45px;
+  width: 33%;
+  height: 97%;
+  border: 2px solid #ffca27;
 }
 
 .clicked {
-    cursor: not-allowed;
+  cursor: not-allowed;
 }
 
 .cell:hover:not(.clicked) {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #row1 > .cell {
-    border-top: none;
+  border-top: none;
 }
 
 #row3 > .cell {
-    border-bottom: none;
+  border-bottom: none;
 }
 
 .left {
-    border-left: none;
+  border-left: none;
 }
 
 .right {
-    border-right: none;
+  border-right: none;
 }
 
 button {
-    font-family: 'Permanent Marker', cursive;
-    font-size: 17px;
-    padding: 0.7em 0.5em;
-    background-color: #FFCA27;
-    color:  #FF4C4C;
-    border-radius: 15px;
-    border: 2px solid #FFCA27;
-    letter-spacing: 1.3px;
-    transition: box-shadow 0.4s;
+  font-family: "Permanent Marker", cursive;
+  font-size: 17px;
+  padding: 0.7em 0.5em;
+  background-color: #ffca27;
+  color: #ff4c4c;
+  border-radius: 15px;
+  border: 2px solid #ffca27;
+  letter-spacing: 1.3px;
+  transition: box-shadow 0.4s;
+  margin: 10px auto;
 }
 
 button:disabled {
-    opacity: 0.5;
-    cursor: not-allowed;
+  opacity: 0.5;
+  cursor: not-allowed;
 }
 
 button:hover:not(:disabled) {
-    cursor: pointer;
-    box-shadow: 0px 4px 4px 0px #962e2e;
+  cursor: pointer;
+  box-shadow: 0px 4px 4px 0px #962e2e;
 }
 
 .game-over {
-    padding: 0.5em 1em;
-    border-radius: 15px;
-    border: 2px solid #FFCA27;
-    font-size: 20px;
-    color: #FFCA27 !important;
+  text-align: center;
+  padding: 0.5em 1em;
+  border-radius: 15px;
+  border: 2px solid #ffca27;
+  font-size: 20px;
+  color: white !important;
+}
+
+#current-play {
+  text-align: center;
+}
+
+.cross {
+  transition: all 2s;
+}
+
+.horizontal {
+  width: 5px;
+  height: 110%;
+  background-color: white;
+  transform: rotate(90deg) translate(0px, 15px);
+}
+
+.vertical {
+  width: 5px;
+  height: 110%;
+  background-color: white;
+  transform: rotate(180deg) translate(15px, 0px);
+}
+
+.left-slant {
+  width: 5px;
+  height: 150%;
+  background-color: white;
+  transform: rotate(45.7deg) translate(-10px, 10px);
+}
+
+.right-slant {
+  width: 5px;
+  height: 150%;
+  background-color: white;
+  transform: rotate(134.3deg) translate(10px, 10px);
 }
