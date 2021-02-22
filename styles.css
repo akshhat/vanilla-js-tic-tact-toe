@@ -1,4 +1,5 @@
 body {
+    font-family: 'Permanent Marker', cursive;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -27,9 +28,21 @@ main {
 }
 
 .cell {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 45px;
     width: 33%;
     height: 97%;
     border: 2px solid black;
+}
+
+.clicked {
+    cursor: not-allowed;
+}
+
+.cell:hover:not(.clicked) {
+    cursor: pointer;
 }
 
 #row1 > .cell {
@@ -46,4 +59,16 @@ main {
 
 .right {
     border-right: none;
+}
+
+button {
+    font-family: 'Permanent Marker', cursive;
+}
+
+button:hover:disabled {
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    cursor: pointer;
 }
